@@ -16,6 +16,9 @@ configure_file(conf/version.h.in version.h)
 
 find_package(Threads REQUIRED)
 
+list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+include(ClangFormat)
+
 include_directories(
         ${CMAKE_CURRENT_BINARY_DIR}
 )
@@ -23,6 +26,8 @@ include_directories(
 add_executable(${CMAKE_PROJECT_NAME}
     main.cpp
 )
+
+target_clangformat_setup(${CMAKE_PROJECT_NAME})
 
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE
     -Wall
@@ -39,7 +44,7 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 )
 
 target_link_libraries(${CMAKE_PROJECT_NAME}
-  pthread
+    pthread
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
