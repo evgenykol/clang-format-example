@@ -1,0 +1,7 @@
+language: cpp
+before_script:
+  - sudo apt-get install clang-format -y
+script:
+  - cmake .
+  - cmake --build . --target clangformat_check
+  - cmake --build .

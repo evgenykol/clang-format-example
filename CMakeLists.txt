@@ -9,7 +9,6 @@ endif()
 project(clang_format_example VERSION 1.0.${PROJECT_VERSION_PATCH})
 
 # set(CMAKE_CXX_CLANG_TIDY clang-tidy -warnings-as-errors=-* -checks=-*,readability-*,cppcoreguidelines-*,boost-*,performance-*,portability-*,misc-*,modernize-*,bugprone-*)
-# set(CMAKE_LINK_WHAT_YOU_USE TRUE)
 set(CMAKE_CXX_STANDARD 17)
 
 configure_file(conf/version.h.in version.h)

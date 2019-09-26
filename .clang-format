@@ -1,5 +1,13 @@
 ﻿---
 BasedOnStyle: LLVM
+BreakConstructorInitializers: BeforeColon
+ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
+ConstructorInitializerIndentWidth: '4'
+ContinuationIndentWidth: '0'
+Cpp11BracedListStyle: 'false'
 IndentWidth: '4'
+Language: Cpp
+Standard: Cpp11
+TabWidth: '0'
 
 ...
