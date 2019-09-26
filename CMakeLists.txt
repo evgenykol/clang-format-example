@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.10)
 
 if($ENV{CI_PIPELINE_ID})
     set(PROJECT_VERSION_PATCH $ENV{CI_PIPELINE_ID})
