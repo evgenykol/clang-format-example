@@ -1,6 +1,12 @@
 language: cpp
-before_script:
-  - sudo apt-get install clang-format -y
+compiler: clang
+sudo: false
+
+addons:
+  apt:
+   packages:
+     - libboost-system-dev
+
 script:
   - cmake .
   - cmake --build . --target clangformat_check
