@@ -24,8 +24,8 @@ include_directories(
 
 add_executable(${CMAKE_PROJECT_NAME}
     main.cpp
-    beast/session.h
-    beast/session.cpp
+    hello/hello.h
+    hello/hello.cpp
 )
 
 target_clangformat_setup(${CMAKE_PROJECT_NAME})
